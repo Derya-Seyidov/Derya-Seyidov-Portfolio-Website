@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f5f5;
+  color: #222;
+}
+
+/* NAVBAR */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: rgba(0,0,0,0.85);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 22px;
+}
+
+.nav-brand {
+  color: white;
+  font-weight: bold;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 16px;
+  padding: 6px 8px;
+  border-radius: 6px;
+}
+
+.nav-links a:hover {
+  background-color: rgba(255,255,255,0.15);
+  color: #00bcd4;
+}
+
+/* HERO VIDEO */
+.hero {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.45);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 52px;
+  margin: 0;
+}
+
+.hero-content p {
+  margin: 12px 0 20px;
+}
+
+/* BUTTON */
+.btn {
+  background-color: #00bcd4;
+  color: black;
+  padding: 12px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* SECTIONS */
+.section {
+  padding: 60px 18px;
+  max-width: 1050px;
+  margin: auto;
+  text-align: center;
+}
+
+.section.alt {
+  background-color: white;
+}
+
+/* ABOUT */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 22px;
+  align-items: center;
+}
+
+.about-img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+/* PROJECT CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.card {
+  background-color: white;
+  padding: 16px;
+  border-radius: 16px;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+/* GITHUB IMAGE */
+.github-img {
+  width: 140px;
+  margin-top: 20px;
+  transition: transform 0.3s;
+}
+
+.github-img:hover {
+  transform: scale(1.1);
+}
+
+/* FOOTER */
+.footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
